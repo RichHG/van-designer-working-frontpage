@@ -1,0 +1,81 @@
+/* Section Toggle Controls */
+.van-builder-section-toggles {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    max-width: 80%;
+}
+
+.van-builder-section-toggle {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    color: #555;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    margin: 2px;
+}
+
+.van-builder-section-toggle.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #2E7D32;
+}
+
+.van-builder-section-toggle:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+.van-builder-section-toggle.active:hover {
+    background-color: #3e8e41;
+    border-color: #2E7D32;
+}
+
+.van-builder-section-toggle-all {
+    padding: 8px 12px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    margin: 2px;
+    margin-top: 8px;
+}
+
+.van-builder-section-toggle-all:hover {
+    background-color: #e0e0e0;
+}
+
+#show-all-sections {
+    background-color: #2196F3;
+    color: white;
+    border-color: #0b7dda;
+}
+
+#show-all-sections:hover {
+    background-color: #0b7dda;
+}
+
+#hide-all-sections {
+    background-color: #ff9800;
+    color: white;
+    border-color: #e68a00;
+}
+
+#hide-all-sections:hover {
+    background-color: #e68a00;
+}

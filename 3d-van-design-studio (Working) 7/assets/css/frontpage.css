@@ -1,0 +1,507 @@
+/* Modern Frontpage Styles */
+.van-builder-container-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.van-builder-frontpage-modern {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    z-index: 10;
+}
+
+#van-builder-scene-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.van-builder-container-hidden {
+    display: none !important; /* Use !important to override any other display settings */
+}
+
+.van-builder-app-container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+/* App Header */
+.van-builder-app-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.van-builder-app-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.app-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.app-button.red { background-color: #ff5f57; }
+.app-button.yellow { background-color: #ffbd2e; }
+.app-button.green { background-color: #28ca41; }
+
+.van-builder-app-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.van-builder-app-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.van-builder-user-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.van-builder-start-now-btn {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.van-builder-start-now-btn:hover {
+    background-color: #ff7b00;
+}
+
+.van-builder-close-btn {
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* App Content */
+.van-builder-app-content {
+    padding: 30px 25px 40px;
+    min-height: 650px !important; /* Increased height with !important */
+    position: relative;
+}
+
+/* Main Heading */
+.van-builder-main-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.van-builder-main-heading h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.van-builder-main-heading p {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Two Column Layout */
+.van-builder-two-column {
+    display: flex;
+    gap: 30px;
+}
+
+.van-builder-left-column {
+    flex: 0 0 40%; /* Changed from flex: 1 to fixed 40% width */
+    max-width: 40%; /* Changed from 60% */
+}
+
+.van-builder-right-column {
+    flex: 0 0 60%; /* Changed from flex: 1 */
+    max-width: 60%; /* Changed from 40% */
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.van-builder-right-column h3 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    text-align: center;
+    color: #444;
+}
+
+/* Models Container */
+.van-builder-models-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px !important; /* Increased gap for more space between models */
+    max-height: 650px !important; /* Increased height */
+    overflow-y: auto;
+    position: relative;
+    padding-right: 10px;
+}
+
+/* Fixed Model Cards */
+/* Make model cards more compact */
+.van-builder-model-card {
+    background-color: #f0f2f5;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px !important;
+    min-height: 350px !important;
+    width: 100% !important;
+}
+
+.van-builder-model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Fix for model images */
+/* Fix for model images - Make them fill the card width */
+.van-builder-model-image {
+    height: 260px !important;
+    overflow: hidden;
+    position: relative;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #f8f8f8;
+    padding: 0 !important; /* Remove padding */
+    width: 100% !important;
+}
+
+/* Force image sizes */
+/* Force image sizes to fill available width */
+.van-builder-model-image img {
+    width: 100% !important; /* Changed from auto */
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important; /* Remove height constraint */
+    object-fit: cover !important; /* Changed from contain to cover */
+    margin: 0 !important;
+    display: block !important;
+}
+
+.van-builder-model-info {
+    padding: 20px;
+    background-color: #f0f2f5;
+    position: relative;
+    z-index: 2;
+}
+
+.van-builder-model-info h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.van-builder-model-info p {
+    color: #666;
+    margin: 0 0 15px;
+    font-size: 14px;
+}
+
+.van-builder-start-button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.van-builder-start-button:hover {
+    background-color: #00acc1;
+}
+
+/* Alternate colors for model cards */
+.van-builder-model-card:nth-child(3n+1) .van-builder-start-button {
+    background-color: #00bcd4;
+}
+
+.van-builder-model-card:nth-child(3n+1) .van-builder-start-button:hover {
+    background-color: #00acc1;
+}
+
+.van-builder-model-card:nth-child(3n+2) .van-builder-start-button {
+    background-color: #ff8c00;
+}
+
+.van-builder-model-card:nth-child(3n+2) .van-builder-start-button:hover {
+    background-color: #ff7b00;
+}
+
+.van-builder-model-card:nth-child(3n) .van-builder-start-button {
+    background-color: #8bc34a;
+}
+
+.van-builder-model-card:nth-child(3n) .van-builder-start-button:hover {
+    background-color: #7cb342;
+}
+
+/* Saved Designs */
+.van-builder-saved-designs-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.van-builder-no-designs {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.no-designs-icon, .login-notice-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #757575;
+}
+
+.van-builder-saved-designs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.van-builder-saved-design-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.van-builder-saved-design-info h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.van-builder-saved-design-info p {
+    color: #666;
+    margin: 0;
+    font-size: 12px;
+}
+
+.van-builder-saved-design-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.van-builder-continue-button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.van-builder-continue-button:hover {
+    background-color: #00acc1;
+}
+
+.delete-design-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.delete-design-button:hover {
+    background-color: #e53935;
+}
+
+/* Login Notice */
+.van-builder-login-notice {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.van-builder-login-button {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+.van-builder-login-button:hover {
+    background-color: #00acc1;
+}
+
+/* Decorative Elements */
+.van-builder-decorative-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.decorative-mountain {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    background-color: #b0bec5;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    bottom: 40px;
+    left: 30px;
+}
+
+.decorative-tree {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background-color: #26a69a;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    bottom: 40px;
+    left: 130px;
+}
+
+.decorative-cloud {
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: #eceff1;
+    border-radius: 15px;
+    top: 40px;
+    right: 50px;
+}
+
+.decorative-sun {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ffb74d;
+    border-radius: 50%;
+    top: 60px;
+    left: 60px;
+}
+
+/* Panel Navigation */
+.van-builder-panel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.panel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.panel-dot.active {
+    background-color: #00bcd4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .van-builder-two-column {
+        flex-direction: column;
+    }
+    
+    .van-builder-left-column,
+    .van-builder-right-column {
+        max-width: 100%;
+    }
+    
+    .van-builder-models-container {
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .van-builder-app-header {
+        padding: 15px;
+    }
+    
+    .van-builder-user-icon {
+        display: none;
+    }
+    
+    .van-builder-saved-design-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .van-builder-saved-design-actions {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .van-builder-continue-button {
+        flex: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .van-builder-app-content {
+        padding: 20px 15px 30px;
+    }
+    
+    .van-builder-main-heading h2 {
+        font-size: 24px;
+    }
+}
